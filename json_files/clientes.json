@@ -1,0 +1,13 @@
+[
+    { "id": 1, "rut": "18620855-1", "name": "Angel Serrano", "active": true },
+    { "id": 2, "rut": "11345435-2", "name": "Roser Abreu", "active": true },
+    { "id": 3, "rut": "14256777-k", "name": "Rosa Campos", "active": true },
+    { "id": 4, "rut": "12675688-0", "name": "Celestino Fuentes", "active": true },
+    { "id": 5, "rut": "14234334-4", "name": "Rebeca Rojas", "active": true },
+    { "id": 6, "rut": "10152323-8", "name": "Andrea Palomo", "active": true },
+    { "id": 7, "rut": "15587715-4", "name": "Maria Inmaculada Jiménez", "active": true },
+    { "id": 8, "rut": "15034590-7", "name": "Marcela Navarro", "active": true },
+    { "id": 9, "rut": "11804345-3", "name": "Francisco Manuel Gago", "active": true },
+    { "id": 10, "rut": "13804238-0", "name": "Patricio Duran", "active": true }
+]
+    
