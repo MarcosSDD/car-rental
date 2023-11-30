@@ -20,10 +20,10 @@ class Client(models.Model):
 
 
 class Client_rent(models.Model):
-    id_cliente = models.ForeignKey(Client, to_field="id", on_delete=models.CASCADE)
-    id_empresa = models.ForeignKey(Company, to_field="id", on_delete=models.CASCADE)
-    costo_diario = models.IntegerField()
-    dias = models.IntegerField()
+    id_client = models.ForeignKey(Client, to_field="id", on_delete=models.CASCADE)
+    id_company = models.ForeignKey(Company, to_field="id", on_delete=models.CASCADE)
+    daily_cost = models.IntegerField()
+    days = models.IntegerField()
 
     def __str__(self) -> str:
         return f"{self.id_cliente}:{self.id_empresa}"

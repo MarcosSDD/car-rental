@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+    docker compose up
+elif [ "$1" == "test" ]; then
+    docker compose run backend python -W ignore manage.py test
+else
+    docker compose run --service-ports backend "$1"
+fi

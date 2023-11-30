@@ -18,10 +18,10 @@ class Command(BaseCommand):
         for entry in data:
             client_rent = {
                 "id" : entry['id'],
-                "id_cliente" : Client.objects.get(id=str(entry['id_cliente'])),
-                "id_empresa" : Company.objects.get(id=str(entry['id_empresa'])),
-                "costo_diario" : entry['costo_diario'],
-                "dias" : entry['dias']
+                "id_client" : Client.objects.get(id=str(entry['id_client'])),
+                "id_company" : Company.objects.get(id=str(entry['id_company'])),
+                "daily_cost" : entry['daily_cost'],
+                "days" : entry['days']
             }
             client_rent_array.append(client_rent)
         return client_rent_array

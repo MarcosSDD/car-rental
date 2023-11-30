@@ -14,5 +14,19 @@ class ClientSerializer(serializers.ModelSerializer):
 class Client_rentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client_rent
-        fields = ["id_cliente", "id_empresa", "costo_diario", "dias"]
-        #fields = "__all__"
+        fields = ["id_client", "id_company", "daily_cost", "days"]
+
+class RentsCompanySerializer(serializers.Serializer):
+    id_company = serializers.IntegerField()
+    name_company = serializers.CharField()
+    records_quantity = serializers.IntegerField()
+
+class RentsClientSerializer(serializers.Serializer):
+    id_client = serializers.IntegerField()
+    name_client = serializers.CharField()
+    records_quantity = serializers.IntegerField()
+
+class CostClientSerializer(serializers.Serializer):
+    id_client = serializers.IntegerField()
+    name_client = serializers.CharField()
+    total_cost = serializers.IntegerField()
