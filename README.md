@@ -4,23 +4,72 @@ Apps:
 
 - Api Car rental
 
-## Local setup
+## Prerequisites
 
-### Copy environment
+* Python3 installed.
+* Alternative Docker installed.
 
-```
-cp .dev_env .env
-```
 
-### Copy databse
+## Local Development without Docker
 
 ```
-cp db_dev.sqlite3 db.sqlite3
+sudo apt-get install python3-pip python3-dev build-essential python3-virtualenv virtualenv
+
+virtualenv -p python3 venv
+
+source venv/bin/activate         
+
+cp .dev_env .env                                            
+
+pip install -r requirements.txt 
+
+``` 
+
+### Run migration DB
+```
+python manage.py makemigrations
+
+python manage.py migrate
+
+```
+### Create superuser
+```
+python manage.py createsuperuser
+
 ```
 
-### Run
+### Run dev server
+This will run server on http://localhost:8000
+```
+python manage.py runserver
 
-#### Run API
+```
+
+### Create superuser
+If you want, you can create initial super-user with next commad:
+
+```
+python manage.py createsuperuser
+
+```
+
+### Running Tests
+To run all tests with code-coverate report, simple run:
+```
+python manage.py test
+
+```
+
+### Running Command DB
+To run command to DB, simple run:
+```
+python manage.py seed_data
+
+```
+
+### Run Local Development with Docker
+
+#### Run Docker compose
 
 ```
 ./up
