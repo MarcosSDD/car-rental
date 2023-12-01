@@ -70,7 +70,7 @@ python manage.py seed_data
 ### Run Local Development with Docker
 
 #### Run Docker compose
-
+Initially, DB migrations must be performed
 ```
 ./up
 ```
