@@ -4,17 +4,17 @@ from api.models import Company, Client, Client_rent
 class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
-        fields = ["id", "name"]
+        fields = '__all__'
 
 class ClientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client
-        fields = ["id", "rut", "name", "active"]
+        fields = '__all__'
 
 class Client_rentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client_rent
-        fields = ["id_client", "id_company", "daily_cost", "days"]
+        fields = '__all__'
 
 class RentsCompanySerializer(serializers.Serializer):
     id_company = serializers.IntegerField()

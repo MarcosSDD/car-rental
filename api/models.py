@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Company(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50, unique=True)
 
     def __str__(self) -> str:
@@ -10,7 +10,7 @@ class Company(models.Model):
 
 
 class Client(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     rut = models.CharField(max_length=15)
     name = models.CharField(max_length=100)
     active = models.BooleanField(default=True)
