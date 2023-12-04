@@ -34,22 +34,23 @@ python manage.py migrate
 ```
 ### Create superuser
 ```
-python manage.py createsuperuser
+python manage.py createsuperuser --username dev --email dev@example.com
 
 ```
+The easiest way to generate a token, just for testing purpose, is using the command line utility again:
+
+```
+python manage.py drf_create_token dev
+
+```
+
+Now this Token must be saved to use it in the frontend
+
 
 ### Run dev server
 This will run server on http://localhost:8000
 ```
 python manage.py runserver
-
-```
-
-### Create superuser
-If you want, you can create initial super-user with next commad:
-
-```
-python manage.py createsuperuser
 
 ```
 
@@ -87,7 +88,7 @@ Run `./devrun` to initialize the server
 
 And play! Login to:
 http://127.0.0.1:9000/admin/
-> user `dev@gmail.com` pass `devdevdev`
+> user `dev@example.com` pass `devdevdev` or password created in previous step
 
 
 #### Tests
